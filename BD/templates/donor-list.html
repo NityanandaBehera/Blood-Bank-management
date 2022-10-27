@@ -1,0 +1,34 @@
+{% extends 'main.html' %} {% block content %}
+<p>Search Donor</p>
+<form action="{%url 'donor-list'%}" method="GET">
+  <input
+    type="text"
+    placeholder="Search Donor"
+    name="search_query"
+    value="{{search_query}}"
+  />
+  <input type="submit" />
+</form>
+<table>
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Blood group</th>
+    <th>Adress</th>
+    <th>Any Deases</th>
+    <th>Details</th>
+  </tr>
+  {% for d in donor %}
+  <tr>
+    <td>{{d.id}}</td>
+    <td>{{d.name}}</td>
+    <td>{{d.email}}</td>
+    <td>{{d.blood_group}}</td>
+    <td>{{d.adress}}</td>
+    <td>{{d.heart_deases}}</td>
+    <td><a href="{%url 'details' d.id%}">View</a></td>
+  </tr>
+  {% endfor %}
+</table>
+{%endblock content%}

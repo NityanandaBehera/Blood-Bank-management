@@ -1,0 +1,29 @@
+{% extends 'main.html' %} {% block content %}
+<table>
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>Phone</th>
+    <th>Adress</th>
+    <th>Blood group</th>
+    <th>Dibetis</th>
+    <th>Heart Deases</th>
+    <th>when you donate in last</th>
+  </tr>
+  <tr>
+    <td>{{donor.id}}</td>
+    <td>{{donor.name}}</td>
+    <td>{{donor.email}}</td>
+    <td>{{donor.age}}</td>
+    <td>{{donor.phone}}</td>
+    <td>{{donor.adress}}</td>
+    <td>{{donor.blood_group}}</td>
+    <td>{{donor.dibetis}}</td>
+    <td>{{donor.heart_deases}}</td>
+    <td>{{donor.last_time_donated}}</td>
+  </tr>
+</table>
+
+{% endblock content %}
