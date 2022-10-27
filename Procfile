@@ -1,1 +1,1 @@
-web: gunicorn BRM.wsgi --log-file -
+web: gunicorn BBM.wsgi --log-file -
